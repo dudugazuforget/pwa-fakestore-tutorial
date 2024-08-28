@@ -7,7 +7,8 @@ import CartOutline from 'vue-material-design-icons/CartOutline.vue';
 import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
 import Account from 'vue-material-design-icons/Account.vue'
 import Menu from 'vue-material-design-icons/Menu.vue';
-
+import ShapePlusOutline from 'vue-material-design-icons/ShapePlusOutline.vue'
+ 
 const showMenu = ref(false)
 
 onBeforeRouteUpdate(() => {
@@ -31,6 +32,10 @@ onBeforeRouteUpdate(() => {
             <HomeOutline size="25" fillColor="#282828" />
             Home
         </RouterLink>
+        <router-link to="/categorias">
+            <ShapePlusOutline size="25" fillColor="#282828" />
+             categoria
+        </router-link>
         <RouterLink to="/">
             <AccountCircleOutline size="25" fillColor="#282828" />
             Perfil

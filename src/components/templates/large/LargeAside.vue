@@ -3,6 +3,8 @@ import { onMounted } from 'vue';
 
 import LogoTitle from '@/components/templates/LogoTitle.vue';
 
+ 
+
 import { useCategoryStore } from '@/stores/category';
 const categoryStore = useCategoryStore();
 
@@ -19,9 +21,14 @@ onMounted(async () => {
             <router-link to="/">
                 <i class="icon mdi mdi-home-outline" /> Home
             </router-link>
-            <router-link v-for="category in  categoryStore.categories " :key="category.id"
-                :to="`/produtos/categoria/${category.id}`">
-                <i class="icon mdi" :class="category.icon"></i> {{ category.name }}
+            <router-link to="/categorias">
+                <i class="mdi mdi-shape-plus-outline" /> Categoria
+            </router-link>
+        </div>
+        <div class="divider" />
+        <div class="menu">
+            <router-link to="/login">
+                <i class="icon mdi mdi-account" /> Login
             </router-link>
         </div>
     </div>
